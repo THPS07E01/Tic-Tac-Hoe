@@ -5,7 +5,7 @@ class Board
   attr_accessor :board, :board_comparison
 
   def initialize
-    @a1 = @a2 = @a3 = @b1 = @b2 = @b3 = @c1 = @c2 = @c3 = ' ' # attribution par defaut d'un espace aux variables d'instance
+    @a1 = @a2 = @a3 = @b1 = @b2 = @b3 = @c1 = @c2 = @c3 = '  ' # attribution par defaut d'un espace aux variables d'instance
     @board = [@a1, @a2, @a3, @b1, @b2, @b3, @c1, @c2, @c3]  # création de la table de jeu
     @board_comparison = ['a1', 'a2', 'a3', 'b1', 'b2', 'b3', 'c1', 'c2', 'c3'] # tableau utiliser pour comparer le gets.chomp et savoir s'il s'agit d'une valeur valide
   end
@@ -14,13 +14,13 @@ class Board
     puts `clear`
     puts "
          A   B   C
-       +---+---+---+
+       +----+----+----+
     1  | #{@board[0]} | #{@board[3]} | #{@board[6]} |
-       +---+---+---+
+       +----+----+----+
     2  | #{@board[1]} | #{@board[4]} | #{@board[7]} |
-       +---+---+---+
+       +----+----+----+
     3  | #{@board[2]} | #{@board[5]} | #{@board[8]} |
-       +---+---+---+
+       +----+----+----+
       "
   end
 
@@ -34,7 +34,7 @@ class Board
   end
 
   def coordinates_available?(coords)
-    if @board[@board_comparison.index(coords.downcase)] == ' '
+    if @board[@board_comparison.index(coords.downcase)] == '  '
       true
     else
       puts "Bien essayé, petit malin mais quelqu'un à déjà joué à cet emplacement !"
@@ -65,6 +65,6 @@ class Board
   end
 
   def full?
-    @board.include?(' ') ? false : true
+    @board.include?('  ') ? false : true
   end
 end
