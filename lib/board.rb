@@ -13,7 +13,7 @@ class Board
   def render
     puts `clear`
     puts "
-         A   B   C
+         A    B    C
        +----+----+----+
     1  | #{@board[0]} | #{@board[3]} | #{@board[6]} |
        +----+----+----+
