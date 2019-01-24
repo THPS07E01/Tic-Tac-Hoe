@@ -11,14 +11,13 @@ class Game
     @board = Board.new
     @round = 0
     @arr_p1 = ["\u{1f479}", "\u{1f4a9}", "\u{1f47e}", "\u{1f648}", "\u{1f4a3}", "\u{1f9D5}", "\u{1f9dF}", "\u{1f98D}", "\u{1f98A}", "\u{1f42E}","\u{1f42A}", "\u{1f423}", "\u{1f413}", "\u{1f989}", "\u{1f419}"]
-    @arr_p2 = ["\u{1f354}", "\u{1f355}", "\u{1f32e}", "\u{1f35f}", "\u{1f9c0}", "\u{1f577}", "\u{1f41d}", "\u{1f41b}", "\u{1f419}", "\u{1f433}", "\u{1f422}", "\u{1f432}", "\u{1f995}", "\u{1f996}", "\u{1f427}", "\u{1f994}", "\u{1f987}", "\u{1f984}", "\u{1f938}", "\u{1f3c4}", "\u{1f9de}", "\u{1f9dd}", "\u{1f9dc}", "\u{1f9db}", "\u{1f9d9}", "\u{1f385}", "\u{1f468}", "\u{1f921}", "\u{1f47b}", "\u{1f47a}", "\u{1f47d}", "\u{1f916}"] 
-
+    @arr_p2 = ["\u{1f354}", "\u{1f355}", "\u{1f32e}", "\u{1f35f}", "\u{1f9c0}", "\u{1f41d}", "\u{1f41b}", "\u{1f419}", "\u{1f433}", "\u{1f422}", "\u{1f432}", "\u{1f995}", "\u{1f996}", "\u{1f427}", "\u{1f994}", "\u{1f987}", "\u{1f984}", "\u{1f938}", "\u{1f3c4}", "\u{1f9de}", "\u{1f9dd}", "\u{1f9dc}", "\u{1f9db}", "\u{1f9d9}", "\u{1f385}", "\u{1f468}", "\u{1f921}", "\u{1f47b}", "\u{1f47a}", "\u{1f47d}", "\u{1f916}"] 
 
     # creation des joueurs
 		puts "Dans le coin gauche... This is John Cena !! Tutulutu\n\n"
-    print"Non plus sérieusement quelle drôle de nom peut avoir une chipolata comme toi joueur 1 ?\n> "
+    print"Non plus sérieusement quel drôle de nom peut avoir une chipolata comme toi joueur 1 ?\n> "
     player_1 = gets.chomp
-		puts "\nEt notre challenger ! L'IMPACABLE, le MAGNIFIQUE, avec 0 défaite pour 0 partie à son actif. Il s'agit de ...\n\n"
+		puts "\nEt notre challenger ! L'IMPLACABLE, le MAGNIFIQUE, avec 0 défaite pour 0 partie à son actif. Il s'agit de ...\n\n"
     print "Euh c'est quoi ton nom joueur 2 ?\n> "
     player_2 = gets.chomp
     puts "\nOk cette partie opposera donc #{player_1} contre #{player_2} !\n\n"
@@ -62,7 +61,7 @@ class Game
 
   def check_victory
     if @board.winning_combination?(@current_player.piece)	# verifie si il n'y a pas de combinaison gagnante
-        puts "Bouyaaa #{@current_player.name}, tu l'as saucé comme jaja !"
+        puts "Bouyaaa #{@current_player.name.blink}, tu l'as saucé comme jaja !"
         true	# return true dans ce cas pour mettre fin à la boucle de la def play
     else
         false
@@ -71,7 +70,7 @@ class Game
 
   def check_draw
     if @board.full?	# verifie si la table de jeu est pleine
-        puts "Egalité !!"
+        puts "Double KO ! C'est un fuckin #{"DRAW".blink} !"
         true	# return true dans ce cas pour mettre fin à la boucle de la def play
     else
         false

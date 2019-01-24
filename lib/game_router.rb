@@ -12,7 +12,7 @@ class GameRouter
       puts "\nTu veux te faire une partie ?"
       puts "\n1. Oui \u{1f3b0}"
       #rejouer contre le même joueur
-      puts "\n2. Tu aimes les surprises ? \u{1f381}".blink #affichage d'une page bonus
+      puts "\n2. Tu aimes les #{"surprises".blink} ? \u{1f381}" #affichage d'une page bonus
       puts "\n3. Je vous emmerde et je rentre à ma maison \u{1f3d8}"
       params = gets.chomp.to_i #on attend le choix de l'utilisateur
 
@@ -26,7 +26,7 @@ class GameRouter
         Cartman.new.vous_emmerde
         break #ce "break" permet de sortir de la boucle while.
       else
-        puts "Ce choix n'existe pas, merci de ressayer" #si l'utilisateur saisit une entrée non prévue.
+        puts "Tu ne sais donc pas compter jusqu'à 3 ? #{"Try again".blink}" #si l'utilisateur saisit une entrée non prévue.
       end
     end
   end
