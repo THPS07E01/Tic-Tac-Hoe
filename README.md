@@ -5,7 +5,7 @@
 ## KEEP CALM, YOU ARE GOING TO PLAY
 
 Aujourd'hui tu vas devoir nous corriger, mais pour cela tu vas devoir jouer ! On t'a concocté un petit Morpion, tu connais ? Alors ça devrait être plutôt cool, tu aimes schwifter ? 
-> C’est comme Inception, si c’est confus et stupide alors tout le monde va [adorer](https://www.youtube.com/watch?v=Bk3lknaWI9Q).
+> C’est comme Inception, si c’est confus et stupide alors tout le monde va [adorer](https://www.youtube.com/watch?v=I1188GO4p1E).
 >                    -- Rick Sanchez
 
 ## VIENS SCHWIFTER  ![]()
