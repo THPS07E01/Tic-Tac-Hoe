@@ -6,7 +6,6 @@ $:.unshift File.expand_path("./../lib", __FILE__)
 require 'game_router'
 require 'game_controller'
 require 'board'
-require 'boardcase'
 require 'player'
 require 'show'
 
