@@ -7,7 +7,7 @@ class Player
     @name = name
     @piece = piece
     @board = board
-    @board_comparison = ['a1', 'a2', 'a3', 'b1', 'b2', 'b3', 'c1', 'c2', 'c3']  # tableau utiliser pour comparer le gets.chomp et savoir s'il s'agit d'une valeur valide
+    @board_comparison = ['a1', 'a2', 'a3', 'b1', 'b2', 'b3', 'c1', 'c2', 'c3']  # tableau utilisé pour comparer le gets.chomp et savoir s'il s'agit d'une valeur valide
   end
 
   def get_coordinates
@@ -15,7 +15,7 @@ class Player
       coords = ask_for_coordinates
       if validate_coordinates(coords)
         if @board.add_piece(coords, @piece)
-            # toutes les conditions précédentes ont étaient vérifiée -> break de la boucle
+            # toutes les conditions précédentes ont été vérifiées -> break de la boucle
             break
         end
       end
