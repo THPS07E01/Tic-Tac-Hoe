@@ -8,5 +8,6 @@ require 'game_controller'
 require 'board'
 require 'player'
 require 'show'
+require 'done'
 
 GameRouter.new.perform
