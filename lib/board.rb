@@ -5,9 +5,9 @@ class Board
   attr_accessor :board, :board_comparison
 
   def initialize
-    @a1 = @a2 = @a3 = @b1 = @b2 = @b3 = @c1 = @c2 = @c3 = '  ' # attribution par defaut d'un espace aux variables d'instance
+    @a1 = @a2 = @a3 = @b1 = @b2 = @b3 = @c1 = @c2 = @c3 = '  ' # attribution par défaut d'un espace aux variables d'instance
     @board = [@a1, @a2, @a3, @b1, @b2, @b3, @c1, @c2, @c3]  # création de la table de jeu
-    @board_comparison = ['a1', 'a2', 'a3', 'b1', 'b2', 'b3', 'c1', 'c2', 'c3'] # tableau utiliser pour comparer le gets.chomp et savoir s'il s'agit d'une valeur valide
+    @board_comparison = ['a1', 'a2', 'a3', 'b1', 'b2', 'b3', 'c1', 'c2', 'c3'] # tableau utilisé pour comparer le gets.chomp et savoir s'il s'agit d'une valeur valide
   end
 
   def render
